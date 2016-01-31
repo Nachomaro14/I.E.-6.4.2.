@@ -10,11 +10,11 @@ public class Database {
     
     java.sql.Connection o;
     
-    private String url = "";
-    private String user = "";
-    private String password = "";
+    private String url = "jdbc:oracle:thin:@localhost:1521:XE";
+    private String user = "SYSTEM";
+    private String password = "root";
     
-    public java.sql.Connection getConnection(){
+    public java.sql.Connection getConexion(){
         try{
             o = DriverManager.getConnection(url, user, password);
         }catch(SQLException ex){
